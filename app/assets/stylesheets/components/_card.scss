@@ -1,0 +1,45 @@
+.card-picture {
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+}
+.card {
+  margin-bottom: 30px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+.card-footer {
+  display: flex;
+  text-align: center;
+  vertical-align: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  font-size: 14px;
+}
+.card-details {
+  background-color: rgba(230, 230, 230, 0.4);
+  padding: 10px 20px;
+  height: 150px;
+}
+.card-details-numerics {
+  display: flex;
+  text-align: center;
+  vertical-align: center;
+  p {
+    padding-right: 20px;
+    margin: 0;
+  }
+}
+.card-details h5 {
+  font-weight: light;
+  font-size: 15px;
+}
+.fa-green a {
+  color: #81AE64;
+}
+.fa-blue a {
+  color: #597FCA;
+}
+.fa-red a {
+  color: #E75151;
+}

@@ -1,0 +1,43 @@
+<%= link_to "Add Flat", new_flat_path  %>
+
+<h1>All our Flats (<%= Flat.count %>)</h1>
+
+<ul>
+    <div class="container">
+      <div class="row">
+        <% @flats.each do |flat| %>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card">
+              <div class="card-picture" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200')">
+              </div>
+              <div class="card-details">
+                <h4><%= flat.name %></h4>
+                <h5><%= flat.address %></h5>
+                <div class="card-details-numerics">
+                  <p>
+                    <i class="fa fa-users" aria-hidden="true"></i> <%= flat.number_of_guests %>
+                  </p>
+                  <p>
+                    <i class="fa fa-eur" aria-hidden="true"></i> <%= flat.price_per_night %>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="fa-green">
+                  <%= link_to '<i class="fa fa-info" aria-hidden="true"></i> More info'.html_safe, flat_path(flat)%>
+                </div>
+                <div class="fa-blue">
+                  <%= link_to '<i class="fa fa-pencil" aria-hidden="true"></i> Edit'.html_safe, edit_flat_path(flat)%>
+                </div>
+                <div class="fa-red">
+                <%= link_to '<i class="fa fa-trash" aria-hidden="true"></i> Delete'.html_safe, flat_path(flat),
+                    method: :delete,
+                    data: { confirm: "Are you sure you want to delete this flat?" }%>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</ul>
