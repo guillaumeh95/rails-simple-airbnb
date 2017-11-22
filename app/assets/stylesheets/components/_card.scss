@@ -2,6 +2,7 @@
   height: 200px;
   background-size: cover;
   background-position: center center;
+  position: relative;
 }
 .card {
   margin-bottom: 30px;
@@ -22,12 +23,9 @@
   height: 150px;
 }
 .card-details-numerics {
-  display: flex;
-  text-align: center;
-  vertical-align: center;
+  color: white;
   p {
-    padding-right: 20px;
-    margin: 0;
+    margin: 0 0;
   }
 }
 .card-details h5 {
@@ -42,4 +40,15 @@
 }
 .fa-red a {
   color: #E75151;
+}
+.price {
+  font-size: 30px;
+  position: absolute;
+  bottom: 0px;
+  right: 15px;
+}
+.number_of_guests {
+  position: absolute;
+  bottom: 6px;
+  left: 15px;
 }
